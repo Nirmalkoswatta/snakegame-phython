@@ -89,16 +89,28 @@ Score = Base Points (10) × Difficulty Multiplier × Current Level
    pip install pygame
    ```
 
-3. **Run the game launcher:**
+3. **Run the games:**
+
+   **Option A: Use the easy batch files (Windows):**
    ```bash
+   run_games.bat          # Game launcher
+   run_snake.bat          # Snake game directly
+   run_guess.bat          # Number guessing game
+   ```
+
+   **Option B: Activate virtual environment first:**
+   ```bash
+   activate_env.bat       # Activate virtual environment
    python game_launcher.py
    ```
 
-   Or run individual games:
+   **Option C: Direct command (any OS):**
    ```bash
-   python snake_game.py
-   python guess_the_number.py
-   python rock_paper_scissors.py
+   # Windows
+   .\.venv\Scripts\python.exe game_launcher.py
+   
+   # Linux/Mac
+   ./venv/bin/python game_launcher.py
    ```
 
 ## 🎯 Game Modes & Difficulty
@@ -142,6 +154,47 @@ snakegame-phython/
 - High score system
 - Bonus games included
 - Complete documentation
+
+## 🐛 Troubleshooting
+
+### "ModuleNotFoundError: No module named 'pygame'"
+
+This error occurs when you're using system Python instead of the virtual environment. **Solutions:**
+
+1. **Use the batch files (Windows):**
+   - Double-click `run_games.bat` or `run_snake.bat`
+
+2. **Activate virtual environment:**
+   ```bash
+   # Windows
+   activate_env.bat
+   # Then run: python snake_game.py
+   
+   # Linux/Mac
+   source venv/bin/activate
+   python snake_game.py
+   ```
+
+3. **Use full path to virtual environment Python:**
+   ```bash
+   # Windows
+   .\.venv\Scripts\python.exe snake_game.py
+   
+   # Linux/Mac
+   ./venv/bin/python snake_game.py
+   ```
+
+### Other Issues
+- Make sure Python 3.7+ is installed
+- Ensure all game files are in the same directory
+- Check that the virtual environment was created properly
+
+## 🚀 Quick Start (Windows Users)
+
+The easiest way to run the games on Windows:
+1. Download/clone the repository
+2. Double-click `run_games.bat`
+3. Choose your game from the launcher!
 
 ## 🎯 Future Enhancements
 
